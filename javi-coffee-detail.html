@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Dự án JAVI Coffee | Nguyễn Minh Thư</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Mermaid.js to display visual fallback diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            themeVariables: {
+                primaryColor: '#0f766e',
+                primaryTextColor: '#ffffff',
+                lineColor: '#64748b',
+                edgeLabelBackground: '#f8fafc'
+            }
+        });
+    </script>
+</head>
+<body style="padding-top: 0; background-color: var(--bg-primary); position: relative; overflow-x: hidden;">
+
+    <!-- Background Side Clouds -->
+    <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 10%; animation-delay: 0s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 30%; animation-delay: -3s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 60%; animation-delay: -1.5s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-white" style="top: 85%; animation-delay: -4s;"></div>
+
+    <!-- Detail Header -->
+    <div class="explorer-header-bar">
+        <div class="container explorer-nav">
+            <a href="index.html#projects" class="back-home-btn">
+                <i class="fas fa-arrow-left"></i> Quay lại trang chủ
+            </a>
+            <div class="explorer-header-title">
+                Hồ sơ dự án: <span>JAVI Coffee Management</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">
+                Trình duyệt Sơ đồ & Tài liệu
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Explorer Layout -->
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem; position: relative; z-index: 1;">
+        <div class="explorer-layout">
+            <!-- Sidebar: Folders Tree -->
+            <div class="explorer-sidebar">
+                <div class="explorer-sidebar-title">
+                    <i class="fas fa-folder-open"></i> Thư mục sơ đồ
+                </div>
+                
+                <ul class="explorer-tree">
+                    <!-- Category 1: Use Case Diagrams -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ Use Case</span>
+                        <ul class="tree-items">
+                            <li class="tree-item active" data-file="usecase-tong-the">
+                                <i class="far fa-file-image"></i> Mức tổng thể
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-khach-hang">
+                                <i class="far fa-file-image"></i> QL Khách hàng
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-don-hang">
+                                <i class="far fa-file-image"></i> QL Đơn hàng
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-san-pham">
+                                <i class="far fa-file-image"></i> QL Sản phẩm
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-phieu-thu">
+                                <i class="far fa-file-image"></i> QL Phiếu thu
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-loai-san-pham">
+                                <i class="far fa-file-image"></i> QL Loại sản phẩm
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-hoa-don">
+                                <i class="far fa-file-image"></i> QL Hóa đơn
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-phieu-xuat">
+                                <i class="far fa-file-image"></i> QL Phiếu xuất
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-tai-khoan">
+                                <i class="far fa-file-image"></i> QL Tài khoản
+                            </li>
+                            <li class="tree-item" data-file="usecase-ql-loai-khach-hang">
+                                <i class="far fa-file-image"></i> QL Loại khách hàng
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 2: Activity Diagrams -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ Hoạt động</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="activity-dang-nhap">
+                                <i class="far fa-file-image"></i> Quy trình Đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="activity-tao-hoa-don">
+                                <i class="far fa-file-image"></i> Quy trình Tạo hóa đơn
+                            </li>
+                            <li class="tree-item" data-file="activity-tao-don-hang">
+                                <i class="far fa-file-image"></i> Quy trình Tạo đơn hàng
+                            </li>
+                            <li class="tree-item" data-file="activity-them-phieu-xuat">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu xuất
+                            </li>
+                            <li class="tree-item" data-file="activity-them-phieu-thu">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu thu
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 3: Sequence Diagrams -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ Trình tự</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="sequence-dang-nhap">
+                                <i class="far fa-file-image"></i> Quy trình Đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="sequence-tao-don-hang">
+                                <i class="far fa-file-image"></i> Quy trình Tạo đơn hàng
+                            </li>
+                            <li class="tree-item" data-file="sequence-them-phieu-xuat">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu xuất
+                            </li>
+                            <li class="tree-item" data-file="sequence-them-hoa-don">
+                                <i class="far fa-file-image"></i> Quy trình Thêm hóa đơn
+                            </li>
+                            <li class="tree-item" data-file="sequence-them-phieu-thu">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu thu
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 4: Collaboration Diagrams -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ Cộng tác</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="collaboration-dang-nhap">
+                                <i class="far fa-file-image"></i> Quy trình Đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="collaboration-them-phieu-xuat">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu xuất
+                            </li>
+                            <li class="tree-item" data-file="collaboration-them-phieu-thu">
+                                <i class="far fa-file-image"></i> Quy trình Thêm phiếu thu
+                            </li>
+                            <li class="tree-item" data-file="collaboration-tao-don-hang">
+                                <i class="far fa-file-image"></i> Quy trình Tạo đơn hàng
+                            </li>
+                            <li class="tree-item" data-file="collaboration-tao-hoa-don">
+                                <i class="far fa-file-image"></i> Quy trình Tạo hóa đơn
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 5: State Diagrams -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ Trạng thái</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="state-don-hang">
+                                <i class="far fa-file-image"></i> Trạng thái Đơn hàng
+                            </li>
+                            <li class="tree-item" data-file="state-hoa-don">
+                                <i class="far fa-file-image"></i> Trạng thái Hóa đơn
+                            </li>
+                            <li class="tree-item" data-file="state-cong-no">
+                                <i class="far fa-file-image"></i> Trạng thái Công nợ
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 6: DB & Structure -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Cơ sở dữ liệu & Cấu trúc</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="erd">
+                                <i class="far fa-file-image"></i> Sơ đồ thực thể ERD
+                            </li>
+                            <li class="tree-item" data-file="class-diagram">
+                                <i class="far fa-file-image"></i> Sơ đồ lớp (Class Diagram)
+                            </li>
+                            <li class="tree-item" data-file="database-diagram">
+                                <i class="far fa-file-image"></i> Database Diagram
+                            </li>
+                            <li class="tree-item" data-file="schema-table">
+                                <i class="fas fa-table"></i> Đặc tả bảng dữ liệu
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 7: DFD -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Luồng dữ liệu DFD</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="dfd-level-0">
+                                <i class="far fa-file-image"></i> DFD Mức 0
+                            </li>
+                            <li class="tree-item" data-file="dfd-level-1">
+                                <i class="far fa-file-image"></i> DFD Mức 1
+                            </li>
+                            <li class="tree-item" data-file="dfd-level-2-1">
+                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 1
+                            </li>
+                            <li class="tree-item" data-file="dfd-level-2-2">
+                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 2
+                            </li>
+                            <li class="tree-item" data-file="dfd-level-2-3">
+                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 3
+                            </li>
+                            <li class="tree-item" data-file="dfd-level-2-4">
+                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 4
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content Area: Diagram Viewer -->
+            <div class="explorer-viewer">
+                <div class="explorer-viewer-path">
+                    <i class="fas fa-hdd"></i> Gốc / JAVI Coffee / <span id="current-path-text">Sơ đồ UML / Sơ đồ Use Case</span>
+                </div>
+
+                <div class="explorer-canvas">
+                    <div class="explorer-canvas-inner">
+                    <!-- Dotted Box Placeholder & Fallback Mermaid / Content -->
+                    
+                    <!-- === USE CASE DIAGRAMS === -->
+                    <!-- Sơ đồ Use Case - Mức tổng thể -->
+                    <div class="file-content active" id="file-usecase-tong-the">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-tong-the.jpg" alt="Sơ đồ use case mức tổng thể" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case mức tổng thể</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-tong-the.jpg</code></p>
+                                    </div>
+                                    <div class="diagram-preview-card">
+                                        <div class="preview-badge"><i class="fas fa-eye"></i> Sơ đồ vẽ tự động (Mermaid.js fallback)</div>
+                                        <div class="mermaid">
+                                        graph TD
+                                            Customer((Khách hàng)) -->|Đặt món trực tuyến| UC_Order(Đặt Món / Order)
+                                            Customer -->|Thanh toán điện tử| UC_Pay(Thanh toán hóa đơn)
+                                            Staff((Nhân viên bán hàng)) -->|Xử lý đơn hàng| UC_Order
+                                            Staff -->|Xuất hóa đơn| UC_Invoice(Quản lý Hóa đơn)
+                                            Manager((Quản lý cửa hàng)) -->|Xem báo cáo doanh số| UC_Report(Báo cáo Doanh số)
+                                            Manager -->|Kiểm tra kho| UC_Inventory(Quản lý Tồn kho)
+                                            
+                                            style UC_Order fill:#0f766e,stroke:#fff,stroke-width:2px,color:#fff
+                                            style UC_Pay fill:#0f766e,stroke:#fff,stroke-width:2px,color:#fff
+                                            style UC_Invoice fill:#0f766e,stroke:#fff,stroke-width:2px,color:#fff
+                                            style UC_Report fill:#0f766e,stroke:#fff,stroke-width:2px,color:#fff
+                                            style UC_Inventory fill:#0f766e,stroke:#fff,stroke-width:2px,color:#fff
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Use Cases -->
+                    <div class="file-content" id="file-usecase-ql-khach-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-khach-hang.jpg" alt="Sơ đồ use case Quản lý khách hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý khách hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-khach-hang.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-don-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-don-hang.jpg" alt="Sơ đồ use case Quản lý đơn hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý đơn hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-don-hang.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-san-pham">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-san-pham.jpg" alt="Sơ đồ use case Quản lý sản phẩm" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý sản phẩm</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-san-pham.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-phieu-thu">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-phieu-thu.jpg" alt="Sơ đồ use case Quản lý phiếu thu" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý phiếu thu</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-phieu-thu.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-loai-san-pham">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-loai-san-pham.jpg" alt="Sơ đồ use case Quản lý loại sản phẩm" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý loại sản phẩm</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-loai-san-pham.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-hoa-don">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-hoa-don.jpg" alt="Sơ đồ use case Quản lý hóa đơn" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý hóa đơn</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-hoa-don.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-phieu-xuat">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-phieu-xuat.jpg" alt="Sơ đồ use case Quản lý phiếu xuất" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý phiếu xuất</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-phieu-xuat.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-tai-khoan">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-tai-khoan.jpg" alt="Sơ đồ use case Quản lý tài khoản" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý tài khoản</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-tai-khoan.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-usecase-ql-loai-khach-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/usecase/use-case-ql-loai-khach-hang.jpg" alt="Sơ đồ use case Quản lý loại khách hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ use case Quản lý loại khách hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/usecase/use-case-ql-loai-khach-hang.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === ACTIVITY DIAGRAMS === -->
+                    <div class="file-content" id="file-activity-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/activity/activity-dang-nhap.jpg" alt="Sơ đồ hoạt động quy trình Đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ hoạt động quy trình Đăng nhập</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/activity/activity-dang-nhap.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-activity-tao-hoa-don">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/activity/activity-tao-hoa-don.jpg" alt="Sơ đồ hoạt động quy trình Tạo hóa đơn" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ hoạt động quy trình Tạo hóa đơn</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/activity/activity-tao-hoa-don.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-activity-tao-don-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/activity/activity-tao-don-hang.jpg" alt="Sơ đồ hoạt động quy trình Tạo đơn hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ hoạt động quy trình Tạo đơn hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/activity/activity-tao-don-hang.jpg</code></p>
+                                    </div>
+                                    <div class="diagram-preview-card">
+                                        <div class="preview-badge"><i class="fas fa-eye"></i> Sơ đồ vẽ tự động (Mermaid.js fallback)</div>
+                                        <div class="mermaid">
+                                        graph TD
+                                            Start([Bắt đầu]) --> SelectItem[Khách chọn đồ uống tại quầy]
+                                            SelectItem --> CheckStock{Còn nguyên liệu?}
+                                            CheckStock -->|Còn| InputOrder[Thu ngân nhập đơn hàng vào hệ thống]
+                                            CheckStock -->|Hết| NotifyCustomer[Báo hết hàng / Đổi món khác]
+                                            NotifyCustomer --> SelectItem
+                                            InputOrder --> CalcTotal[Hệ thống tự tính tiền & chiết khấu]
+                                            CalcTotal --> Payment{Chọn thanh toán}
+                                            Payment -->|Tiền mặt| PayCash[Nhận tiền mặt & In hóa đơn]
+                                            Payment -->|Ví điện tử / QR| PayDigital[Quét mã QR qua cổng & Xác thực]
+                                            PayCash --> Prepare[Pha chế chuẩn bị đồ]
+                                            PayDigital --> Prepare
+                                            Prepare --> Deliver[Bàn giao đồ & kết thúc giao dịch]
+                                            Deliver --> End([Kết thúc])
+                                            
+                                            style Start fill:#1e293b,stroke:#fff,color:#fff
+                                            style End fill:#1e293b,stroke:#fff,color:#fff
+                                            style CheckStock fill:#0f766e,stroke:#fff,color:#fff
+                                            style Payment fill:#0f766e,stroke:#fff,color:#fff
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-activity-them-phieu-xuat">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/activity/activity-them-phieu-xuat.jpg" alt="Sơ đồ hoạt động quy trình Thêm phiếu xuất" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ hoạt động quy trình Thêm phiếu xuất</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/activity/activity-them-phieu-xuat.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-activity-them-phieu-thu">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/activity/activity-them-phieu-thu.jpg" alt="Sơ đồ hoạt động quy trình Thêm phiếu thu" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ hoạt động quy trình Thêm phiếu thu</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/activity/activity-them-phieu-thu.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === SEQUENCE DIAGRAMS === -->
+                    <div class="file-content" id="file-sequence-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/sequence/sequence-dang-nhap.jpg" alt="Sơ đồ tuần tự quy trình Đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ tuần tự quy trình Đăng nhập</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/sequence/sequence-dang-nhap.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-sequence-tao-don-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/sequence/sequence-tao-don-hang.jpg" alt="Sơ đồ tuần tự quy trình Tạo đơn hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ tuần tự quy trình Tạo đơn hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/sequence/sequence-tao-don-hang.jpg</code></p>
+                                    </div>
+                                    <div class="diagram-preview-card">
+                                        <div class="preview-badge"><i class="fas fa-eye"></i> Sơ đồ vẽ tự động (Mermaid.js fallback)</div>
+                                        <div class="mermaid">
+                                        sequenceDiagram
+                                            actor Customer as Khách hàng
+                                            participant Staff as Nhân viên Thu ngân
+                                            participant System as Hệ thống JAVI POS
+                                            participant DB as CSDL Hệ thống
+
+                                            Customer->>Staff: Yêu cầu đặt món & thanh toán
+                                            Staff->>System: Chọn món uống trên màn hình POS
+                                            System->>DB: Truy vấn số lượng tồn nguyên liệu
+                                            DB-->>System: Trả về kết quả (Còn hàng)
+                                            System-->>Staff: Hiển thị chi phí & QR thanh toán
+                                            Staff->>Customer: Yêu cầu quét mã QR thanh toán
+                                            Customer->>System: Thực hiện quét thanh toán ngân hàng
+                                            System->>DB: Ghi nhận hóa đơn & cập nhật số lượng tồn kho
+                                            DB-->>System: Xác nhận lưu hóa đơn thành công
+                                            System-->>Staff: In hóa đơn giao dịch ra máy POS
+                                            Staff->>Customer: Gửi hóa đơn & Đưa đồ uống cho khách
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-sequence-them-phieu-xuat">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/sequence/sequence-them-phieu-xuat.jpg" alt="Sơ đồ tuần tự quy trình Thêm phiếu xuất" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ tuần tự quy trình Thêm phiếu xuất</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/sequence/sequence-them-phieu-xuat.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-sequence-them-hoa-don">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/sequence/sequence-them-hoa-don.jpg" alt="Sơ đồ tuần tự Thêm hóa đơn" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ tuần tự Thêm hóa đơn</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/sequence/sequence-them-hoa-don.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-sequence-them-phieu-thu">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/sequence/sequence-them-phieu-thu.jpg" alt="Sơ đồ tuần tự quy trình Thêm phiếu thu" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ tuần tự quy trình Thêm phiếu thu</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/sequence/sequence-them-phieu-thu.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === COLLABORATION DIAGRAMS === -->
+                    <div class="file-content" id="file-collaboration-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/collaboration/collaboration-dang-nhap.jpg" alt="Sơ đồ cộng tác quy trình Đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ cộng tác quy trình Đăng nhập</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/collaboration/collaboration-dang-nhap.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-collaboration-them-phieu-xuat">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/collaboration/collaboration-them-phieu-xuat.jpg" alt="Sơ đồ cộng tác quy trình Thêm phiếu xuất" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ cộng tác quy trình Thêm phiếu xuất</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/collaboration/collaboration-them-phieu-xuat.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-collaboration-them-phieu-thu">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/collaboration/collaboration-them-phieu-thu.jpg" alt="Sơ đồ cộng tác quy trình Thêm phiếu thu" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ cộng tác quy trình Thêm phiếu thu</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/collaboration/collaboration-them-phieu-thu.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-collaboration-tao-don-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/collaboration/collaboration-tao-don-hang.jpg" alt="Sơ đồ cộng tác quy trình Tạo đơn hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ cộng tác quy trình Tạo đơn hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/collaboration/collaboration-tao-don-hang.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-collaboration-tao-hoa-don">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/collaboration/collaboration-tao-hoa-don.jpg" alt="Sơ đồ cộng tác quy trình Tạo hóa đơn" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ cộng tác quy trình Tạo hóa đơn</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/collaboration/collaboration-tao-hoa-don.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === STATE DIAGRAMS === -->
+                    <div class="file-content" id="file-state-don-hang">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/state/state-don-hang.jpg" alt="Sơ đồ trạng thái Đơn hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ trạng thái Đơn hàng</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/state/state-don-hang.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-state-hoa-don">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/state/state-hoa-don.jpg" alt="Sơ đồ trạng thái Hóa đơn" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ trạng thái Hóa đơn</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/state/state-hoa-don.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-state-cong-no">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/state/state-cong-no.jpg" alt="Sơ đồ trạng thái Công nợ" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ trạng thái Công nợ</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/state/state-cong-no.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === DB & STRUCTURE === -->
+                    <div class="file-content" id="file-erd">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/erd_class_db/erd.jpg" alt="Sơ đồ thực thể ERD" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Khung chứa ảnh Sơ đồ ERD Cơ sở dữ liệu</h4>
+                                        <p>Bạn chỉ cần lưu ảnh sơ đồ vào thư mục dự án với đường dẫn: <code>images/javi/erd_class_db/erd.jpg</code> để thay thế.</p>
+                                    </div>
+                                    <div class="diagram-preview-card">
+                                        <div class="preview-badge"><i class="fas fa-eye"></i> Sơ đồ vẽ tự động (Mermaid.js fallback)</div>
+                                        <div class="mermaid">
+                                        erDiagram
+                                            KHACH_HANG ||--o{ HOA_DON : "đặt hàng"
+                                            HOA_DON ||--|{ CT_HOA_DON : "chứa"
+                                            MON_AN_DO_UONG ||--o{ CT_HOA_DON : "được gọi trong"
+                                            
+                                            KHACH_HANG {
+                                                string MaKH PK
+                                                string TenKH
+                                                string SoDienThoai
+                                                int DiemTichLuy
+                                            }
+                                            HOA_DON {
+                                                string MaHD PK
+                                                string MaKH FK
+                                                datetime NgayLap
+                                                decimal TongTien
+                                            }
+                                            CT_HOA_DON {
+                                                string MaHD PK, FK
+                                                string MaMon PK, FK
+                                                int SoLuong
+                                                decimal DonGia
+                                            }
+                                            MON_AN_DO_UONG {
+                                                string MaMon PK
+                                                string TenMon
+                                                decimal DonGia
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-class-diagram">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/erd_class_db/class-diagram.jpg" alt="Sơ đồ lớp - Class Diagram" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ lớp - Class Diagram</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/erd_class_db/class-diagram.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-database-diagram">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/erd_class_db/database-diagram.jpg" alt="Database Diagram" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Database Diagram</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/erd_class_db/database-diagram.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === DFD DIAGRAMS === -->
+                    <div class="file-content" id="file-dfd-level-0">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-0.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 0" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 0</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-0.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-dfd-level-1">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-1.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 1" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 1</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-1.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-dfd-level-2-1">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-2-1.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 1" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 1</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-1.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-dfd-level-2-2">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-2-2.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 2" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 2</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-2.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-dfd-level-2-3">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-2-3.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 3" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 3</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-3.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-dfd-level-2-4">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/dfd-level-2-4.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 4" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 4</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-4.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Content 5: Schema Table -->
+                    <div class="file-content" id="file-schema-table">
+                        <div class="db-tables-list" style="max-height: 480px; overflow-y: auto;">
+                            <!-- Table 1 -->
+                            <div class="db-table-card" style="margin-bottom: 1.5rem;">
+                                <div class="db-table-header">
+                                    <span>KHACH_HANG (Thông tin khách hàng thành viên)</span>
+                                    <i class="fas fa-table"></i>
+                                </div>
+                                <div class="db-table-rows">
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">MaKH</span>
+                                        <span class="db-col-type">VARCHAR(20)</span>
+                                        <span class="db-col-key">PK</span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">TenKH</span>
+                                        <span class="db-col-type">NVARCHAR(100)</span>
+                                        <span class="db-col-key"></span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">SoDienThoai</span>
+                                        <span class="db-col-type">VARCHAR(15)</span>
+                                        <span class="db-col-key"></span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">DiemTichLuy</span>
+                                        <span class="db-col-type">INT</span>
+                                        <span class="db-col-key"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Table 2 -->
+                            <div class="db-table-card">
+                                <div class="db-table-header">
+                                    <span>HOA_DON (Hóa đơn bán hàng)</span>
+                                    <i class="fas fa-table"></i>
+                                </div>
+                                <div class="db-table-rows">
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">MaHD</span>
+                                        <span class="db-col-type">VARCHAR(20)</span>
+                                        <span class="db-col-key">PK</span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">MaKH</span>
+                                        <span class="db-col-type">VARCHAR(20)</span>
+                                        <span class="db-col-key">FK</span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">NgayLap</span>
+                                        <span class="db-col-type">DATETIME</span>
+                                        <span class="db-col-key"></span>
+                                    </div>
+                                    <div class="db-table-row">
+                                        <span class="db-col-name">TongTien</span>
+                                        <span class="db-col-type">DECIMAL(18,2)</span>
+                                        <span class="db-col-key"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End of explorer-canvas-inner -->
+            </div> <!-- End of explorer-canvas -->
+            </div> <!-- End of explorer-viewer -->
+    </div>
+
+    <!-- App Logic Script -->
+    <script src="js/app.js"></script>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Quay lại đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>

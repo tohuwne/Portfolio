@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Dự án Đặt vé Phim | Nguyễn Minh Thư</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="padding-top: 0; background-color: var(--bg-primary); position: relative; overflow-x: hidden;">
+
+    <!-- Background Side Clouds -->
+    <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 10%; animation-delay: 0s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 30%; animation-delay: -3s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 60%; animation-delay: -1.5s;"></div>
+    <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-white" style="top: 85%; animation-delay: -4s;"></div>
+
+    <!-- Detail Header -->
+    <div class="explorer-header-bar" style="border-bottom-color: var(--border-color);">
+        <div class="container explorer-nav">
+            <a href="index.html#projects" class="back-home-btn">
+                <i class="fas fa-arrow-left"></i> Quay lại trang chủ
+            </a>
+            <div class="explorer-header-title">
+                Hồ sơ dự án: <span>Movie Ticket UI/UX Design</span>
+            </div>
+            <button id="open-video-demo-btn" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.5rem 1.2rem; border-radius: 6px; display: flex; align-items: center; gap: 8px; background-color: var(--color-brand); border: none; cursor: pointer; color: #fff; font-weight: 600; box-shadow: var(--shadow-sm); transition: all 0.3s ease;">
+                <i class="fas fa-play-circle"></i> Xem Video Demo
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Explorer Layout -->
+    <div class="container" style="padding-top: 2rem; padding-bottom: 4rem; position: relative; z-index: 1;">
+        <div class="explorer-layout">
+            <!-- Sidebar: Folders Tree -->
+            <div class="explorer-sidebar">
+                <div class="explorer-sidebar-title">
+                    <i class="fas fa-folder-open"></i> Thư mục sơ đồ
+                </div>
+                
+                <ul class="explorer-tree">
+                    <!-- Category 1: User Research -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Nghiên cứu & Phân tích</span>
+                        <ul class="tree-items">
+                            <li class="tree-item active" data-file="persona">
+                                <i class="far fa-file-image"></i> User Persona
+                            </li>
+                            <li class="tree-item" data-file="empathy">
+                                <i class="far fa-file-image"></i> Empathy Map
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 2: User Flows -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Luồng người dùng</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="userflow-dang-ky-dang-nhap">
+                                <i class="far fa-file-image"></i> Đăng ký / Đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="userflow-tim-kiem-loc-su-kien">
+                                <i class="far fa-file-image"></i> Tìm kiếm & Lọc sự kiện
+                            </li>
+                            <li class="tree-item" data-file="userflow-dat-ve">
+                                <i class="far fa-file-image"></i> Đặt vé
+                            </li>
+                            <li class="tree-item" data-file="userflow-thanh-toan">
+                                <i class="far fa-file-image"></i> Thanh toán
+                            </li>
+                            <li class="tree-item" data-file="userflow-quan-ly-vi-ve-voucher">
+                                <i class="far fa-file-image"></i> Ví vé & Voucher
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 3: Wireframes -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Khung bản phác thảo</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="wireframe-dang-nhap">
+                                <i class="far fa-file-image"></i> Trang đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="wireframe-trang-chu">
+                                <i class="far fa-file-image"></i> Trang chủ
+                            </li>
+                            <li class="tree-item" data-file="wireframe-chi-tiet-su-kien">
+                                <i class="far fa-file-image"></i> Chi tiết sự kiện
+                            </li>
+                            <li class="tree-item" data-file="wireframe-chon-cho-ngoi">
+                                <i class="far fa-file-image"></i> Chọn chỗ ngồi
+                            </li>
+                            <li class="tree-item" data-file="wireframe-chi-tiet-ve">
+                                <i class="far fa-file-image"></i> Chi tiết vé
+                            </li>
+                            <li class="tree-item" data-file="wireframe-trang-thanh-toan">
+                                <i class="far fa-file-image"></i> Trang thanh toán
+                            </li>
+                            <li class="tree-item" data-file="wireframe-vi-ve">
+                                <i class="far fa-file-image"></i> Ví vé
+                            </li>
+                            <li class="tree-item" data-file="wireframe-kho-voucher">
+                                <i class="far fa-file-image"></i> Kho voucher
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 4: High-Fi UI -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Giao diện UI hoàn chỉnh</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="ui-dang-ky">
+                                <i class="far fa-file-image"></i> Màn hình đăng ký
+                            </li>
+                            <li class="tree-item" data-file="ui-dang-nhap">
+                                <i class="far fa-file-image"></i> Màn hình đăng nhập
+                            </li>
+                            <li class="tree-item" data-file="ui-trang-chu-chua-dang-nhap">
+                                <i class="far fa-file-image"></i> Trang chủ (Chưa đăng nhập)
+                            </li>
+                            <li class="tree-item" data-file="ui-trang-chu-da-dang-nhap">
+                                <i class="far fa-file-image"></i> Trang chủ (Đã đăng nhập)
+                            </li>
+                            <li class="tree-item" data-file="ui-chi-tiet-su-kien">
+                                <i class="far fa-file-image"></i> Chi tiết sự kiện
+                            </li>
+                            <li class="tree-item" data-file="ui-chon-cho-ngoi">
+                                <i class="far fa-file-image"></i> Chọn chỗ ngồi
+                            </li>
+                            <li class="tree-item" data-file="ui-thanh-toan">
+                                <i class="far fa-file-image"></i> Màn hình thanh toán
+                            </li>
+                            <li class="tree-item" data-file="ui-thanh-toan-thanh-cong">
+                                <i class="far fa-file-image"></i> Thanh toán thành công
+                            </li>
+                            <li class="tree-item" data-file="ui-kho-ve-cua-toi">
+                                <i class="far fa-file-image"></i> Kho vé của tôi
+                            </li>
+                            <li class="tree-item" data-file="ui-chi-tiet-ve">
+                                <i class="far fa-file-image"></i> Chi tiết vé
+                            </li>
+                            <li class="tree-item" data-file="ui-kho-voucher">
+                                <i class="far fa-file-image"></i> Kho voucher
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Category 5: Style Guide -->
+                    <li class="tree-category">
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Hướng dẫn phong cách</span>
+                        <ul class="tree-items">
+                            <li class="tree-item" data-file="styleguide">
+                                <i class="far fa-file-image"></i> Style Guide
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content Area: Diagram Viewer -->
+            <div class="explorer-viewer">
+                <div class="explorer-viewer-path">
+                    <i class="fas fa-hdd"></i> Gốc / Đặt vé Phim / <span id="current-path-text">Nghiên cứu & Phân tích / User Persona</span>
+                </div>
+
+                <div class="explorer-canvas">
+                    <div class="explorer-canvas-inner">
+                    <!-- === USER RESEARCH === -->
+                    <!-- File Content 1: User Persona -->
+                    <div class="file-content active" id="file-persona">
+                        <div class="diagram-viewer-container">
+                            <img src="images/movie-persona.png" alt="User Persona" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Khung chứa ảnh User Persona</h4>
+                                    <p>Bạn chỉ cần lưu ảnh User Persona của bạn vào thư mục dự án với đường dẫn: <code>images/movie-persona.png</code> để hiển thị ở đây.</p>
+                                    <div class="info-tag-box" style="margin-top: 1.5rem; text-align: left; background-color: rgba(20, 184, 166, 0.05); padding: 1rem; border-left: 3px solid var(--color-brand-light); border-radius: 4px; font-size: 0.85rem;">
+                                        <strong>💡 Mô tả tóm tắt:</strong> Persona đại diện là Minh (22 tuổi, sinh viên) - Người dùng nhạy cảm về giá, thường đặt vé sát giờ chiếu và có thói quen thanh toán nhanh qua ví điện tử.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Content 2: Empathy Map -->
+                    <div class="file-content" id="file-empathy">
+                        <div class="diagram-viewer-container">
+                            <img src="images/movie-empathy.png" alt="Empathy Map" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Khung chứa ảnh Empathy Map (Bản đồ thấu cảm)</h4>
+                                    <p>Bạn chỉ cần lưu ảnh Empathy Map vào thư mục dự án với đường dẫn: <code>images/movie-empathy.png</code> để hiển thị ở đây.</p>
+                                    <div class="info-tag-box" style="margin-top: 1.5rem; text-align: left; background-color: rgba(20, 184, 166, 0.05); padding: 1rem; border-left: 3px solid var(--color-brand-light); border-radius: 4px; font-size: 0.85rem;">
+                                        <strong>💡 Mô tả tóm tắt:</strong> Bản đồ thấu cảm thể hiện Suy nghĩ & Cảm nhận, Lời nói & Hành động, Nghe thấy, Nhìn thấy của khách hàng khi đối mặt với trải nghiệm đặt vé phức tạp hiện tại.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === USER FLOW DIAGRAMS === -->
+                    <div class="file-content" id="file-userflow-dang-ky-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/userflow/userflow-dang-ky-dang-nhap.jpg" alt="Userflow Đăng ký / Đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Userflow Đăng ký / Đăng nhập</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/userflow/userflow-dang-ky-dang-nhap.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-userflow-tim-kiem-loc-su-kien">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/userflow/userflow-tim-kiem-loc-su-kien.jpg" alt="Userflow Tìm kiếm và Lọc sự kiện" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Userflow Tìm kiếm và Lọc sự kiện</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/userflow/userflow-tim-kiem-loc-su-kien.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-userflow-dat-ve">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/userflow/userflow-dat-ve.jpg" alt="Userflow Đặt vé" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Userflow Đặt vé</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/userflow/userflow-dat-ve.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-userflow-thanh-toan">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/userflow/userflow-thanh-toan.jpg" alt="Userflow Thanh toán" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Userflow Thanh toán</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/userflow/userflow-thanh-toan.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-userflow-quan-ly-vi-ve-voucher">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/userflow/userflow-quan-ly-vi-ve-voucher.jpg" alt="Userflow Quản lý Ví vé và Voucher" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Userflow Quản lý Ví vé và Voucher</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/userflow/userflow-quan-ly-vi-ve-voucher.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === WIREFRAMES === -->
+                    <div class="file-content" id="file-wireframe-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-dang-nhap.jpg" alt="Wireframe trang đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe trang đăng nhập</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-dang-nhap.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-trang-chu">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-trang-chu.jpg" alt="Wireframe trang chủ" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe trang chủ</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-trang-chu.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-chi-tiet-su-kien">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-chi-tiet-su-kien.jpg" alt="Wireframe chi tiết sự kiện" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe chi tiết sự kiện</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-chi-tiet-su-kien.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-chon-cho-ngoi">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-chon-cho-ngoi.jpg" alt="Wireframe chọn chỗ ngồi" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe chọn chỗ ngồi</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-chon-cho-ngoi.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-chi-tiet-ve">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-chi-tiet-ve.jpg" alt="Wireframe chi tiết vé" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe chi tiết vé</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-chi-tiet-ve.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-trang-thanh-toan">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-trang-thanh-toan.jpg" alt="Wireframe trang thanh toán" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe trang thanh toán</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-trang-thanh-toan.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-vi-ve">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-vi-ve.jpg" alt="Wireframe ví vé" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe ví vé</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-vi-ve.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-wireframe-kho-voucher">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/wireframe/wireframe-kho-voucher.jpg" alt="Wireframe kho voucher" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Wireframe kho voucher</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/wireframe/wireframe-kho-voucher.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === HIGH-FI UI === -->
+
+                    <div class="file-content" id="file-ui-dang-ky">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-dang-ky.jpg" alt="Màn hình đăng ký" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình đăng ký</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-dang-ky.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-dang-nhap.jpg" alt="Màn hình đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình đăng nhập</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-dang-nhap.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-trang-chu-chua-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-trang-chu-chua-dang-nhap.jpg" alt="Màn hình trang chủ(chưa đăng nhập)" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình trang chủ(chưa đăng nhập)</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-trang-chu-chua-dang-nhap.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-trang-chu-da-dang-nhap">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-trang-chu-da-dang-nhap.jpg" alt="Màn hình trang chủ(đã đăng nhập)" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình trang chủ(đã đăng nhập)</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-trang-chu-da-dang-nhap.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-chi-tiet-su-kien">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-chi-tiet-su-kien.jpg" alt="Màn hình chi tiết sự kiện" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình chi tiết sự kiện</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-chi-tiet-su-kien.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-chon-cho-ngoi">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-chon-cho-ngoi.jpg" alt="Màn hình chọn chỗ ngồi" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình chọn chỗ ngồi</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-chon-cho-ngoi.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-thanh-toan">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-thanh-toan.jpg" alt="Màn hình thanh toán" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình thanh toán</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-thanh-toan.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-thanh-toan-thanh-cong">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-thanh-toan-thanh-cong.jpg" alt="Màn hình thông báo thanh toán thành công" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình thông báo thanh toán thành công</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-thanh-toan-thanh-cong.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-kho-ve-cua-toi">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-kho-ve-cua-toi.jpg" alt="Màn hình kho vé của tôi" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình kho vé của tôi</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-kho-ve-cua-toi.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-chi-tiet-ve">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-chi-tiet-ve.jpg" alt="Màn hình chi tiết vé" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình chi tiết vé</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-chi-tiet-ve.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="file-content" id="file-ui-kho-voucher">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/ui/ui-kho-voucher.jpg" alt="Màn hình kho voucher" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Màn hình kho voucher</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/ui/ui-kho-voucher.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- === STYLE GUIDE === -->
+                    <div class="file-content" id="file-styleguide">
+                        <div class="diagram-viewer-container">
+                            <img src="images/vibeticket/styleguide/styleguide.jpg" alt="Style Guide" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-box" style="min-height: 400px;">
+                                    <i class="far fa-image placeholder-icon"></i>
+                                    <h4>Style Guide (Hướng dẫn phong cách)</h4>
+                                    <p>Đường dẫn tệp: <code>images/vibeticket/styleguide/styleguide.jpg</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- End of explorer-canvas-inner -->
+            </div> <!-- End of explorer-canvas -->
+            </div> <!-- End of explorer-viewer -->
+        </div>
+    </div>
+
+    <!-- App Logic Script -->
+    <script src="js/app.js"></script>
+
+    <!-- Video Demo Modal -->
+    <div id="video-demo-modal" class="video-modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(11, 15, 25, 0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+        <div class="video-modal-content" style="background-color: #0b0f19; border: 1px solid var(--border-color); width: 90%; max-width: 900px; border-radius: 16px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); overflow: hidden; display: flex; flex-direction: column; transform: scale(0.95); transition: transform 0.3s ease;">
+            <!-- Modal Header -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border-color); background-color: #0f172a;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-video" style="color: var(--color-brand-light); font-size: 1.2rem;"></i>
+                    <h3 style="margin: 0; font-size: 1.1rem; color: #fff; font-weight: 600;">Video Demo Hệ Thống - VibeTicket</h3>
+                </div>
+                <button id="close-video-demo-btn" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.2rem; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-muted)'">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <!-- Modal Body (Video Player or Fallback) -->
+            <div style="position: relative; padding: 1.5rem; background-color: #000; text-align: center;">
+                <video id="modal-vibeticket-video" src="videos/vibeticket-demo.mp4" controls style="width: 100%; max-height: 500px; border-radius: 8px; outline: none;"></video>
+                
+                <!-- Fallback info box if video fails to load (since it is currently 0-bytes) -->
+                <div id="modal-video-placeholder" style="display: block; padding: 3rem 1rem; color: #fff; background-color: #0b0f19; border-radius: 8px; border: 1px dashed var(--border-color);">
+                    <i class="fas fa-video-slash" style="font-size: 2.5rem; color: var(--text-muted); margin-bottom: 1.2rem;"></i>
+                    <h4 style="margin-bottom: 0.5rem; font-size: 1.05rem;">Chưa có Video Demo thực tế</h4>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 500px; margin: 0 auto 1.5rem;">Vui lòng dán đè video demo của bạn vào đường dẫn: <code>videos/vibeticket-demo.mp4</code> để hiển thị trực tiếp tại đây.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .video-modal.show {
+            display: flex !important;
+            opacity: 1 !important;
+        }
+        
+        .video-modal.show .video-modal-content {
+            transform: scale(1) !important;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const openVideoBtn = document.getElementById('open-video-demo-btn');
+            const closeVideoBtn = document.getElementById('close-video-demo-btn');
+            const videoModal = document.getElementById('video-demo-modal');
+            const modalVideo = document.getElementById('modal-vibeticket-video');
+            const modalVideoPlaceholder = document.getElementById('modal-video-placeholder');
+            
+            if (openVideoBtn && videoModal) {
+                openVideoBtn.addEventListener('click', () => {
+                    videoModal.classList.add('show');
+                    
+                    // Check if video is loaded/playable
+                    if (modalVideo) {
+                        modalVideo.load();
+                        modalVideo.play().then(() => {
+                            modalVideo.style.display = 'block';
+                            modalVideoPlaceholder.style.display = 'none';
+                        }).catch(err => {
+                            // If auto-play fails or video is 0-bytes/invalid
+                            modalVideo.style.display = 'none';
+                            modalVideoPlaceholder.style.display = 'block';
+                        });
+                    }
+                });
+            }
+            
+            if (closeVideoBtn && videoModal) {
+                closeVideoBtn.addEventListener('click', () => {
+                    videoModal.classList.remove('show');
+                    if (modalVideo) {
+                        modalVideo.pause();
+                    }
+                });
+            }
+            
+            // Close modal when clicking outside content
+            window.addEventListener('click', (event) => {
+                if (event.target === videoModal) {
+                    videoModal.classList.remove('show');
+                    if (modalVideo) {
+                        modalVideo.pause();
+                    }
+                }
+            });
+            
+            // Listen to video loading metadata to check if valid
+            if (modalVideo) {
+                modalVideo.addEventListener('loadedmetadata', () => {
+                    if (modalVideo.duration > 0) {
+                        modalVideo.style.display = 'block';
+                        modalVideoPlaceholder.style.display = 'none';
+                    }
+                });
+                modalVideo.addEventListener('error', () => {
+                    modalVideo.style.display = 'none';
+                    modalVideoPlaceholder.style.display = 'block';
+                });
+            }
+        });
+    </script>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Quay lại đầu trang">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</body>
+</html>
