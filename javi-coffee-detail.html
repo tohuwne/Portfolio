@@ -188,16 +188,16 @@
                             <li class="tree-item" data-file="database-diagram">
                                 <i class="far fa-file-image"></i> Database Diagram
                             </li>
-                            <li class="tree-item" data-file="schema-table">
-                                <i class="fas fa-table"></i> Đặc tả bảng dữ liệu
-                            </li>
                         </ul>
                     </li>
 
-                    <!-- Category 7: DFD -->
+                    <!-- Category 7: BFD & DFD -->
                     <li class="tree-category">
-                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Luồng dữ liệu DFD</span>
+                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Sơ đồ BFD & DFD</span>
                         <ul class="tree-items">
+                            <li class="tree-item" data-file="bfd">
+                                <i class="far fa-file-image"></i> Sơ đồ BFD
+                            </li>
                             <li class="tree-item" data-file="dfd-level-0">
                                 <i class="far fa-file-image"></i> DFD Mức 0
                             </li>
@@ -205,16 +205,16 @@
                                 <i class="far fa-file-image"></i> DFD Mức 1
                             </li>
                             <li class="tree-item" data-file="dfd-level-2-1">
-                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 1
+                                <i class="far fa-file-image"></i> DFD mức 2: Quản lý bán hàng
                             </li>
                             <li class="tree-item" data-file="dfd-level-2-2">
-                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 2
+                                <i class="far fa-file-image"></i> DFD mức 2: Quản lý hóa đơn và công nợ
                             </li>
                             <li class="tree-item" data-file="dfd-level-2-3">
-                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 3
+                                <i class="far fa-file-image"></i> DFD mức 2: Quản lý xuất kho
                             </li>
                             <li class="tree-item" data-file="dfd-level-2-4">
-                                <i class="far fa-file-image"></i> DFD Mức 2 - Ảnh 4
+                                <i class="far fa-file-image"></i> DFD mức 2: Quản lý phiếu thu
                             </li>
                         </ul>
                     </li>
@@ -801,10 +801,25 @@
                         </div>
                     </div>
 
-                    <!-- === DFD DIAGRAMS === -->
+                    <!-- === BFD & DFD DIAGRAMS === -->
+                    <div class="file-content" id="file-bfd">
+                        <div class="diagram-viewer-container">
+                            <img src="images/javi/dfd/bfd.jpg" alt="Sơ đồ BFD" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <div class="placeholder-fallback-wrapper">
+                                <div class="placeholder-overlay-container">
+                                    <div class="placeholder-box">
+                                        <i class="far fa-image placeholder-icon"></i>
+                                        <h4>Sơ đồ BFD</h4>
+                                        <p>Đường dẫn tệp: <code>images/javi/dfd/bfd.jpg</code></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="file-content" id="file-dfd-level-0">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-0.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 0" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-0.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 0" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
@@ -819,7 +834,7 @@
 
                     <div class="file-content" id="file-dfd-level-1">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-1.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 1" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-1.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 1" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
@@ -834,12 +849,12 @@
 
                     <div class="file-content" id="file-dfd-level-2-1">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-2-1.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 1" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-2-1.jpg" alt="DFD mức 2: Quản lý bán hàng" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
                                         <i class="far fa-image placeholder-icon"></i>
-                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 1</h4>
+                                        <h4>DFD mức 2: Quản lý bán hàng</h4>
                                         <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-1.jpg</code></p>
                                     </div>
                                 </div>
@@ -849,12 +864,12 @@
 
                     <div class="file-content" id="file-dfd-level-2-2">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-2-2.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 2" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-2-2.jpg" alt="DFD mức 2: Quản lý hóa đơn và công nợ" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
                                         <i class="far fa-image placeholder-icon"></i>
-                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 2</h4>
+                                        <h4>DFD mức 2: Quản lý hóa đơn và công nợ</h4>
                                         <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-2.jpg</code></p>
                                     </div>
                                 </div>
@@ -864,12 +879,12 @@
 
                     <div class="file-content" id="file-dfd-level-2-3">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-2-3.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 3" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-2-3.jpg" alt="DFD mức 2: Quản lý xuất kho" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
                                         <i class="far fa-image placeholder-icon"></i>
-                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 3</h4>
+                                        <h4>DFD mức 2: Quản lý xuất kho</h4>
                                         <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-3.jpg</code></p>
                                     </div>
                                 </div>
@@ -879,12 +894,12 @@
 
                     <div class="file-content" id="file-dfd-level-2-4">
                         <div class="diagram-viewer-container">
-                            <img src="images/javi/dfd/dfd-level-2-4.jpg" alt="Sơ đồ luồng dữ liệu DFD mức 2 - Phân rã 4" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
+                            <img src="images/javi/dfd/dfd-level-2-4.jpg" alt="DFD mức 2: Quản lý phiếu thu" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto; cursor: zoom-in;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
                                 <div class="placeholder-overlay-container">
                                     <div class="placeholder-box">
                                         <i class="far fa-image placeholder-icon"></i>
-                                        <h4>Sơ đồ luồng dữ liệu DFD Mức 2 - Ảnh 4</h4>
+                                        <h4>DFD mức 2: Quản lý phiếu thu</h4>
                                         <p>Đường dẫn tệp: <code>images/javi/dfd/dfd-level-2-4.jpg</code></p>
                                     </div>
                                 </div>
@@ -892,70 +907,6 @@
                         </div>
                     </div>
 
-                    <!-- File Content 5: Schema Table -->
-                    <div class="file-content" id="file-schema-table">
-                        <div class="db-tables-list" style="max-height: 480px; overflow-y: auto;">
-                            <!-- Table 1 -->
-                            <div class="db-table-card" style="margin-bottom: 1.5rem;">
-                                <div class="db-table-header">
-                                    <span>KHACH_HANG (Thông tin khách hàng thành viên)</span>
-                                    <i class="fas fa-table"></i>
-                                </div>
-                                <div class="db-table-rows">
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">MaKH</span>
-                                        <span class="db-col-type">VARCHAR(20)</span>
-                                        <span class="db-col-key">PK</span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">TenKH</span>
-                                        <span class="db-col-type">NVARCHAR(100)</span>
-                                        <span class="db-col-key"></span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">SoDienThoai</span>
-                                        <span class="db-col-type">VARCHAR(15)</span>
-                                        <span class="db-col-key"></span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">DiemTichLuy</span>
-                                        <span class="db-col-type">INT</span>
-                                        <span class="db-col-key"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Table 2 -->
-                            <div class="db-table-card">
-                                <div class="db-table-header">
-                                    <span>HOA_DON (Hóa đơn bán hàng)</span>
-                                    <i class="fas fa-table"></i>
-                                </div>
-                                <div class="db-table-rows">
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">MaHD</span>
-                                        <span class="db-col-type">VARCHAR(20)</span>
-                                        <span class="db-col-key">PK</span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">MaKH</span>
-                                        <span class="db-col-type">VARCHAR(20)</span>
-                                        <span class="db-col-key">FK</span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">NgayLap</span>
-                                        <span class="db-col-type">DATETIME</span>
-                                        <span class="db-col-key"></span>
-                                    </div>
-                                    <div class="db-table-row">
-                                        <span class="db-col-name">TongTien</span>
-                                        <span class="db-col-type">DECIMAL(18,2)</span>
-                                        <span class="db-col-key"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div> <!-- End of explorer-canvas-inner -->
             </div> <!-- End of explorer-canvas -->
             </div> <!-- End of explorer-viewer -->

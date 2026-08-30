@@ -117,12 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'state-cong-no': 'Sơ đồ Trạng thái / Công nợ',
         'class-diagram': 'Cơ sở dữ liệu & Cấu trúc / Sơ đồ lớp',
         'database-diagram': 'Cơ sở dữ liệu & Cấu trúc / Database Diagram',
-        'dfd-level-0': 'Luồng dữ liệu DFD / DFD Mức 0',
-        'dfd-level-1': 'Luồng dữ liệu DFD / DFD Mức 1',
-        'dfd-level-2-1': 'Luồng dữ liệu DFD / DFD Mức 2 - Ảnh 1',
-        'dfd-level-2-2': 'Luồng dữ liệu DFD / DFD Mức 2 - Ảnh 2',
-        'dfd-level-2-3': 'Luồng dữ liệu DFD / DFD Mức 2 - Ảnh 3',
-        'dfd-level-2-4': 'Luồng dữ liệu DFD / DFD Mức 2 - Ảnh 4',
+        'bfd': 'Sơ đồ BFD & DFD / Sơ đồ BFD',
+        'dfd-level-0': 'Sơ đồ BFD & DFD / DFD Mức 0',
+        'dfd-level-1': 'Sơ đồ BFD & DFD / DFD Mức 1',
+        'dfd-level-2-1': 'Sơ đồ BFD & DFD / DFD mức 2: Quản lý bán hàng',
+        'dfd-level-2-2': 'Sơ đồ BFD & DFD / DFD mức 2: Quản lý hóa đơn và công nợ',
+        'dfd-level-2-3': 'Sơ đồ BFD & DFD / DFD mức 2: Quản lý xuất kho',
+        'dfd-level-2-4': 'Sơ đồ BFD & DFD / DFD mức 2: Quản lý phiếu thu',
 
         // VibeTicket details
         'userflow-dang-ky-dang-nhap': 'Luồng người dùng / Đăng ký - Đăng nhập',
@@ -208,6 +209,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Lắng nghe sự kiện click để đóng mở
                 categoryName.addEventListener('click', () => {
                     const isCollapsed = itemsList.style.display === 'none';
+                    
+                    // Close other categories (Accordion logic)
+                    treeCategories.forEach(otherCategory => {
+                        if (otherCategory !== category) {
+                            const otherItemsList = otherCategory.querySelector('.tree-items');
+                            const otherChevron = otherCategory.querySelector('.tree-category-name i.fa-chevron-down, .tree-category-name i.fa-chevron-right');
+                            if (otherItemsList) {
+                                otherItemsList.style.display = 'none';
+                            }
+                            if (otherChevron) {
+                                otherChevron.className = 'fas fa-chevron-right';
+                            }
+                        }
+                    });
+
                     itemsList.style.display = isCollapsed ? 'flex' : 'none';
                     
                     if (chevron) {
@@ -365,6 +381,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 0,
                 behavior: 'smooth'
             });
+        });
+    }
+
+    // Lightbox / Image Zoom Logic
+    const diagramImages = document.querySelectorAll('.diagram-img');
+    if (diagramImages.length > 0) {
+        // Create lightbox container
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img class="lightbox-img" src="" alt="Zoomed Image">
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('.lightbox-img');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        diagramImages.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', () => {
+                if (img.style.display !== 'none') {
+                    lightboxImg.src = img.src;
+                    lightbox.classList.add('active');
+                }
+            });
+        });
+
+        const closeLightbox = () => lightbox.classList.remove('active');
+        
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+                closeLightbox();
+            }
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
         });
     }
 });

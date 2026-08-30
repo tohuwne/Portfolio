@@ -235,3 +235,198 @@ A proactive final-year MIS student with a strong passion for Business Analysis a
 
 - **Style Guide**
   ![Style Guide](images/vibeticket/styleguide/styleguide.jpg)
+
+
+### Cấu trúc bảng LOAI_SAN_PHAM
+**Bảng 3. 12: Cấu trúc bảng Loại sản phẩm**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaLoaiSP | Mã loại sản phẩm | CHAR | 3 | Khóa chính |
+| TenLoaiSP | Tên loại sản phẩm | NVARCHAR | 50 | NOT NULL |
+
+### Cấu trúc bảng NHA_CUNG_CAP
+**Bảng 3. 13:  Cấu trúc bảng Nhà cung cấp**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaNCC | Mã nhà cung cấp | CHAR | 5 | Khóa chính |
+| TenNCC | Tên đơn vị NCC | NVARCHAR | 100 | NOT NULL |
+| SoDTNCC | Số điện thoại NCC | VARCHAR | 50 | NOT NULL |
+| EmailNCC | Email liên hệ | VARCHAR | 100 |
+| DiaChiNCC | Địa chỉ NCC | NVARCHAR | 255 | NOT NULL |
+| GhiChu | Ghi chú bổ sung | NVARCHAR | 255 |
+### Cấu trúc bảng SAN_PHAM
+**Bảng 3. 14:  Cấu trúc bảng Sản phẩm**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaSP | Mã sản phẩm | CHAR | 5 | Khóa chính |
+| TenSP | Tên sản phẩm | NVARCHAR | 50 | NOT NULL |
+| DonViTinh | Đơn vị tính | NVARCHAR | 50 | NOT NULL |
+| TrongLuong | Khối lượng tịnh | DECIMAL | 10,2 |
+| GiaBan | Giá niêm yết bán lẻ | DECIMAL | 19,3 | NOT NULL |
+| SoLuongTon | Tồn kho thực tế | DECIMAL | 10,2 | DEFAULT 0 |
+| SoLuongKD | Hàng khả dụng bán | DECIMAL | 10,2 | DEFAULT 0 |
+| GhiChu | Ghi chú | NVARCHAR | 255 |
+| MaLoaiSP | Mã loại sản phẩm | CHAR | 3 | Khóa ngoại |
+
+### Cấu trúc bảng LOAI_KHACH_HANG
+**Bảng 3. 15:  Cấu trúc bảng Loại khách hàng**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaLoaiKH | Mã phân loại KH | CHAR | 3 | Khóa chính |
+| TenLoaiKH | Tên nhóm khách | NVARCHAR | 50 | NOT NULL |
+| TyLeChietKhau | Tỷ lệ chiết khấu | DECIMAL | 5,2 | DEFAULT 0 |
+
+### Cấu trúc bảng KHACH_HANG
+**Bảng 3. 16:  Cấu trúc bảng Khách hàng**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaKH | Mã khách hàng | CHAR | 5 | Khóa chính |
+| TenKH | Họ tên khách hàng | NVARCHAR | 50 | NOT NULL |
+| SoDTKH | Điện thoại | VARCHAR | 50 | NOT NULL |
+| EmailKH | Email | VARCHAR | 100 |
+| GioiTinhKH | Giới tính | NVARCHAR | 10 |
+| DiaChiKH | Địa chỉ | NVARCHAR | 100 | NOT NULL |
+| MaLoaiKH | Mã hạng khách | CHAR | 3 | Khóa ngoại |
+
+### Cấu trúc bảng NHAN_VIEN
+**Bảng 3. 17:  Cấu trúc bảng Nhân viên**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaNV | Mã nhân viên | CHAR | 5 | Khóa chính |
+| HoTenNV | Họ tên nhân viên | NVARCHAR | 50 | NOT NULL |
+| CCCD | Số căn cước | VARCHAR | 20 | UNIQUE |
+| GioiTinh | Giới tính | NVARCHAR | 5 | NOT NULL |
+| ChucVu | Chức vụ | NVARCHAR | 30 | NOT NULL |
+| SoDTNV | Số điện thoại | VARCHAR | 50 | NOT NULL |
+| EmailNV | Email doanh nghiệp | VARCHAR | 100 |
+| DiaChiNV | Địa chỉ | NVARCHAR | 100 | NOT NULL |
+| TrangThai | Trạng thái làm việc | NVARCHAR | 20 | DEFAULT |
+
+### Cấu trúc bảng TAI_KHOAN
+**Bảng 3. 18:  Cấu trúc bảng Tài khoản**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| TenDangNhap | Tên đăng nhập | VARCHAR | 50 | Khóa chính |
+| MatKhau | Mật khẩu băm | VARCHAR | 255 | NOT NULL |
+| MaNV | Mã nhân viên | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng PHIEU_NHAP
+**Bảng 3. 19:  Cấu trúc bảng Phiếu nhập**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaPN | Mã phiếu nhập | CHAR | 5 | Khóa chính |
+| NgayNhap | Thời điểm nhập | DATETIME |  | NOT NULL |
+| SoHoaDonNCC | Hóa đơn đối tác | VARCHAR | 50 |
+| TongTienNhap | Tổng chi phí nhập | DECIMAL | 19,3 | DEFAULT 0 |
+| SoTienDaTraNCC | Tiền đã trả | DECIMAL | 19,3 | DEFAULT 0 |
+| TrangThaiThanhToan | Trạng thái thanh toán | NVARCHAR | 50 | DEFAULT |
+| GhiChu | Ghi chú | NVARCHAR | 255 |
+| MaNV | Mã nhân viên nhập | CHAR | 5 | Khóa ngoại |
+| MaNCC | Mã nhà cung cấp | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng CT_PHIEU_NHAP
+**Bảng 3. 20:  Cấu trúc bảng Chi tiết phiếu nhập**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaPN | Mã phiếu nhập | CHAR | 5 | Khóa chính, ngoại |
+| MaSP | Mã sản phẩm | CHAR | 5 | Khóa chính, ngoại |
+| SoLuong | Số lượng | INT |  | NOT NULL |
+| GiaNhap | Giá nhập đơn vị | DECIMAL | 19,3 | NOT NULL |
+
+### Cấu trúc bảng PHIEU_CHI
+**Bảng 3. 21:  Cấu trúc bảng Phiếu chi**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaPC | Mã phiếu chi | CHAR | 5 | Khóa chính |
+| NgayChi | Ngày chi quỹ | DATETIME |  | NOT NULL |
+| SoTienThucChi | Số tiền chi | DECIMAL | 19,3 | NOT NULL |
+| HinhThucThanhToan | Hình thức chi | NVARCHAR | 50 |
+| GhiChu | Ghi chú | NVARCHAR | 255 |
+| MaPN | Mã phiếu nhập liên kết | CHAR | 5 | Khóa ngoại |
+| MaNV | Mã nhân viên lập | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng DON_HANG
+**Bảng 3. 22:  Cấu trúc bảng Đơn hàng**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaDH | Mã đơn hàng | CHAR | 5 | Khóa chính |
+| NgayDat | Ngày đặt hàng | DATE |  | NOT NULL |
+| TongTienDonHang | Giá trị đơn gốc | DECIMAL | 19,3 | DEFAULT 0 |
+| TongGiamGiaSP | Tổng giảm giá | DECIMAL | 19,3 | DEFAULT 0 |
+| TongTienSauGiam | Thành tiền | DECIMAL | 19,3 | DEFAULT 0 |
+| TrangThaiDonHang | Trạng thái đơn | NVARCHAR | 50 |
+| MaNV | Nhân viên kinh doanh | CHAR | 5 | Khóa ngoại |
+| MaKH | Khách hàng | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng CT_DON_HANG
+**Bảng 3. 23:  Cấu trúc bảng Chi tiết đơn hàng**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaDH | Mã đơn hàng | CHAR | 5 | Khóa chính, ngoại |
+| MaSP | Mã sản phẩm | CHAR | 5 | Khóa chính, ngoại |
+| SoLuong | Số lượng mua | INT |  | NOT NULL |
+| GiamGiaSP | Tỷ lệ giảm giá | DECIMAL | 5,4 | DEFAULT 0 |
+
+### Cấu trúc bảng HOA_DON
+**Bảng 3. 24:  Cấu trúc bảng Hóa đơn**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaHD | Mã hóa đơn | CHAR | 5 | Khóa chính |
+| NgayLap | Ngày lập hóa đơn | DATE |  | NOT NULL |
+| HinhThucThanhToan | Hình thức thanh toán | NVARCHAR | 50 | NOT NULL |
+| TongTienGiamGia | Giảm giá hóa đơn | DECIMAL | 19,3 | DEFAULT 0 |
+| TongTienThanhToan | Tiền thực thu | DECIMAL | 19,3 | NOT NULL |
+| TrangThaiThanhToan | Trạng thái | NVARCHAR | 50 |
+| MaNV | Nhân viên lập | CHAR | 5 | Khóa ngoại |
+| MaDH | Mã đơn hàng gốc | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng PHIEU_XUAT
+**Bảng 3. 25:  Cấu trúc bảng Phiếu xuất**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaPX | Mã phiếu xuất | CHAR | 5 | Khóa chính |
+| NgayXuat | Ngày xuất kho | DATE |  | NOT NULL |
+| TrangThaiGiaoHang | Trạng thái vận chuyển | NVARCHAR | 50 |
+| MaNV | Nhân viên kho | CHAR | 5 | Khóa ngoại |
+| MaDH | Mã đơn hàng | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng CONG_NO
+**Bảng 3. 26:  Cấu trúc bảng Công nợ**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaCN | Mã công nợ | CHAR | 5 | Khóa chính |
+| HanThanhToan | Hạn trả nợ | DATE |
+| NgayGhiNhan | Ngày ghi nhận công nợ | DATE |  | NOT NULL |
+| SoTienDaTra | Đã trả bớt | DECIMAL | 19,3 | DEFAULT 0 |
+| TongNo | Nợ gốc ban đầu | DECIMAL | 19,3 | NOT NULL |
+| SoDuCN | Dư nợ hiện tại | DECIMAL | 19,3 | DEFAULT 0 |
+| TrangThaiCN | Trạng thái nợ | NVARCHAR | 50 |
+| MaHD | Hóa đơn liên kết | CHAR | 5 | Khóa ngoại |
+
+### Cấu trúc bảng PHIEU_THU
+**Bảng 3. 27:  Cấu trúc bảng Phiếu thu**
+
+| Tên thuộc tính | Ý nghĩa | Kiểu dữ liệu | Chiều dài | Ràng buộc |
+|---|---|---|---|---|
+| MaPT | Mã phiếu thu | CHAR | 5 | Khóa chính |
+| NgayThu | Ngày giờ thu tiền | DATETIME |  | NOT NULL |
+| SoTienThucThu | Tiền thực thu | DECIMAL | 19,3 | NOT NULL |
+| HinhThucThanhToan | Hình thức thu | NVARCHAR | 50 |
+| GhiChu | Ghi chú | NVARCHAR | 255 |
+| MaCN | Mã công nợ liên kết | CHAR | 5 | Khóa ngoại |
+| MaNV | Nhân viên lập | CHAR | 5 | Khóa ngoại |
