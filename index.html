@@ -61,12 +61,14 @@
         <div class="css-cloud css-cloud-drift css-cloud-1"></div>
         <div class="css-cloud css-cloud-drift css-cloud-2"></div>
         <div class="css-cloud css-cloud-drift css-cloud-3"></div>
+        <!-- Làn khói trắng -->
+        <div class="bg-smoke-trail float-animation-1" style="top: 30%; left: 5%;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <div class="hero-wrapper">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <i class="fas fa-graduation-cap"></i>
-                        Business Analyst Intern
+                        <i class="fas fa-briefcase"></i>
+                        Business Analyst
                     </div>
                     <h1 class="hero-title">
                         Xin chào, tôi là <br><span>Nguyễn Minh Thư</span>
@@ -83,7 +85,7 @@
                 <div class="hero-visual">
                     <div class="hero-blob"></div>
                     <div class="avatar-container">
-                        <img src="images/avatar.png" alt="Nguyễn Minh Thư" class="avatar-image">
+                        <img src="images/avatar.jpg" alt="Nguyễn Minh Thư" class="avatar-image">
                     </div>
                     <!-- Floating visual tech badges around avatar -->
                     <div class="floating-badge badge-left">
@@ -103,108 +105,84 @@
         <div class="bg-cloud-blob float-animation-1" style="top: -10%; left: -10%;"></div>
         <div class="bg-cloud-blob float-animation-3" style="top: 20%; right: -8%; width: 350px; height: 350px;"></div>
         <!-- Side clouds -->
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 18%; animation-delay: 0s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 60%; animation-delay: -3s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 30%; animation-delay: -1.5s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-yellow" style="top: 70%; animation-delay: -4s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 10%; animation-delay: -12s; animation-duration: 85s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 55%; animation-delay: -24s; animation-duration: 62s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 25%; animation-delay: -5s; animation-duration: 90s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-cyan" style="top: 80%; animation-delay: -32s; animation-duration: 72s;"></div>
+        <!-- Làn khói trắng -->
+        <div class="bg-smoke-trail float-animation-2" style="top: 40%; right: 5%;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title">Năng lực <span>Chuyên môn</span></h2>
             
-            <div class="skills-premium-grid">
-                <!-- Card 1: Business Analysis -->
-                <div class="skills-card-premium reveal reveal-left">
-                    <div class="skills-card-header">
-                        <div class="skill-icon-box"><i class="fas fa-sitemap"></i></div>
-                        <h3>Phân tích Nghiệp vụ</h3>
-                    </div>
-                    <div class="skills-card-content">
-                        <p class="skills-card-desc-text">Kỹ năng khảo sát, thu thập yêu cầu từ stakeholders và lập tài liệu đặc tả nghiệp vụ.</p>
-                        <div class="skill-tags-group">
-                            <span class="skill-tag-badge">Requirement Gathering</span>
-                            <span class="skill-tag-badge">Process Analysis (AS-IS/TO-BE)</span>
-                            <span class="skill-tag-badge">User Stories</span>
-                            <span class="skill-tag-badge">BRD/SRS Documentation</span>
-                            <span class="skill-tag-badge">RTM (Traceability Matrix)</span>
-                        </div>
-                    </div>
+            <div class="skills-showcase">
+                <!-- Tab Controls -->
+                <div class="skills-tabs">
+                    <button class="skill-tab active" data-target="analysis">
+                        <i class="fas fa-sitemap"></i> Phân tích & Thiết kế
+                    </button>
+                    <button class="skill-tab" data-target="tools">
+                        <i class="fas fa-laptop-code"></i> Công nghệ & Công cụ
+                    </button>
+                    <button class="skill-tab" data-target="softskills">
+                        <i class="fas fa-user-friends"></i> Kỹ năng mềm
+                    </button>
                 </div>
 
-                <!-- Card 2: Modeling & Design -->
-                <div class="skills-card-premium reveal reveal-right">
-                    <div class="skills-card-header">
-                        <div class="skill-icon-box"><i class="fas fa-project-diagram"></i></div>
-                        <h3>Thiết kế & Mô hình</h3>
-                    </div>
-                    <div class="skills-card-content">
-                        <p class="skills-card-desc-text">Kỹ năng mô hình hóa quy trình nghiệp vụ và thiết kế cơ sở dữ liệu quan hệ cho hệ thống.</p>
-                        <div class="skill-tags-group">
-                            <span class="skill-tag-badge">BPMN 2.0</span>
-                            <span class="skill-tag-badge">UML modeling</span>
-                            <span class="skill-tag-badge">ERD Diagram</span>
-                            <span class="skill-tag-badge">DFD Flow</span>
-                            <span class="skill-tag-badge">UI/UX Design</span>
+                <!-- Tab Contents -->
+                <div class="skills-content-container glass-panel">
+                    <!-- Tab 1 -->
+                    <div class="skill-pane active" id="pane-analysis">
+                        <div class="pane-header">
+                            <h3>Phân tích & Thiết kế</h3>
+                            <p>Khảo sát yêu cầu, mô hình hóa quy trình nghiệp vụ và thiết kế cơ sở dữ liệu cho hệ thống.</p>
+                        </div>
+                        <div class="skill-badges-grid">
+                            <div class="super-badge"><i class="fas fa-clipboard-list"></i> Thu thập Yêu cầu</div>
+                            <div class="super-badge"><i class="fas fa-project-diagram"></i> Phân tích Quy trình</div>
+                            <div class="super-badge"><i class="fas fa-users"></i> Viết User Stories</div>
+                            <div class="super-badge"><i class="fas fa-file-alt"></i> Tài liệu BRD/SRS</div>
+                            <div class="super-badge"><i class="fas fa-cogs"></i> Mô hình hóa BPMN 2.0</div>
+                            <div class="super-badge"><i class="fas fa-share-alt"></i> Mô hình hóa UML</div>
+                            <div class="super-badge"><i class="fas fa-database"></i> Sơ đồ ERD & DFD</div>
+                            <div class="super-badge"><i class="fas fa-paint-brush"></i> Thiết kế UI/UX</div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 3: Programming Languages -->
-                <div class="skills-card-premium reveal reveal-left">
-                    <div class="skills-card-header">
-                        <div class="skill-icon-box"><i class="fas fa-code"></i></div>
-                        <h3>Ngôn ngữ Lập trình</h3>
-                    </div>
-                    <div class="skills-card-content">
-                        <p class="skills-card-desc-text">Các ngôn ngữ lập trình và truy vấn dữ liệu nền tảng sử dụng trong phân tích dữ liệu, thiết kế hệ thống và phát triển ứng dụng.</p>
-                        <div class="skill-tags-group">
-                            <span class="skill-tag-badge">T-SQL</span>
-                            <span class="skill-tag-badge">C#</span>
-                            <span class="skill-tag-badge">C++ Basic</span>
-                            <span class="skill-tag-badge">HTML / CSS</span>
-                            <span class="skill-tag-badge">JavaScript Basic</span>
+                    <!-- Tab 2 -->
+                    <div class="skill-pane" id="pane-tools">
+                        <div class="pane-header">
+                            <h3>Công nghệ & Công cụ</h3>
+                            <p>Sử dụng ngôn ngữ truy vấn, công cụ phân tích thiết kế, và phần mềm hỗ trợ quản lý dự án.</p>
+                        </div>
+                        <div class="skill-badges-grid">
+                            <div class="super-badge"><i class="fas fa-database"></i> T-SQL</div>
+                            <div class="super-badge"><i class="fas fa-code"></i> C# / C++</div>
+                            <div class="super-badge"><i class="fas fa-server"></i> SQL Server</div>
+                            <div class="super-badge"><i class="fas fa-cloud"></i> SAP S/4HANA</div>
+                            <div class="super-badge"><i class="fab fa-figma"></i> Figma</div>
+                            <div class="super-badge"><i class="fas fa-chart-pie"></i> Power BI</div>
+                            <div class="super-badge"><i class="fas fa-cube"></i> Enterprise Architect</div>
+                            <div class="super-badge"><i class="fas fa-laptop"></i> Rational Rose (IBM)</div>
+                            <div class="super-badge"><i class="fas fa-bolt"></i> Power Designer</div>
+                            <div class="super-badge"><i class="fas fa-pen-nib"></i> Draw.io / Visio</div>
+                            <div class="super-badge"><i class="fab fa-microsoft"></i> MS Office</div>
+                            <div class="super-badge"><i class="fab fa-jira"></i> Jira</div>
+                            <div class="super-badge"><i class="fas fa-dove"></i> Lark</div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card 4: Tech & Tools -->
-                <div class="skills-card-premium reveal reveal-left">
-                    <div class="skills-card-header">
-                        <div class="skill-icon-box"><i class="fas fa-laptop-code"></i></div>
-                        <h3>Công cụ & Kỹ thuật</h3>
-                    </div>
-                    <div class="skills-card-content">
-                        <p class="skills-card-desc-text">Khả năng sử dụng các phần mềm, công cụ phân tích thiết kế hệ thống và trực quan hóa chuyên ngành.</p>
-                        <div class="skill-tags-group">
-                            <span class="skill-tag-badge">SQL Server</span>
-                            <span class="skill-tag-badge">SAP S/4HANA</span>
-                            <span class="skill-tag-badge">Figma</span>
-                            <span class="skill-tag-badge">Rational Rose (IBM)</span>
-                            <span class="skill-tag-badge">Enterprise Architect</span>
-                            <span class="skill-tag-badge">Power BI</span>
-                            <span class="skill-tag-badge">Power Designer</span>
-                            <span class="skill-tag-badge">Draw.io</span>
-                            <span class="skill-tag-badge">Visio</span>
-                            <span class="skill-tag-badge">MS Office</span>
+                    <!-- Tab 3 -->
+                    <div class="skill-pane" id="pane-softskills">
+                        <div class="pane-header">
+                            <h3>Kỹ năng mềm</h3>
+                            <p>Tư duy phân tích, giải quyết vấn đề và hỗ trợ tối ưu hóa giao tiếp, điều phối nhóm hiệu quả.</p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Soft Skills -->
-                <div class="skills-card-premium reveal reveal-right">
-                    <div class="skills-card-header">
-                        <div class="skill-icon-box"><i class="fas fa-user-friends"></i></div>
-                        <h3>Kỹ năng mềm</h3>
-                    </div>
-                    <div class="skills-card-content">
-                        <p class="skills-card-desc-text">Các năng lực mềm bổ trợ, hỗ trợ tối ưu hóa quá trình giao tiếp stakeholders, làm việc nhóm và điều phối dự án.</p>
-                        <div class="skill-tags-group">
-                            <span class="skill-tag-badge">Analytical Thinking</span>
-                            <span class="skill-tag-badge">Problem Solving</span>
-                            <span class="skill-tag-badge">Communication</span>
-                            <span class="skill-tag-badge">Teamwork</span>
-                            <span class="skill-tag-badge">Project Management</span>
-                            <span class="skill-tag-badge">Time Management</span>
-                            <span class="skill-tag-badge">Negotiation</span>
-                            <span class="skill-tag-badge">Presentation</span>
+                        <div class="skill-badges-grid">
+                            <div class="super-badge"><i class="fas fa-brain"></i> Tư duy Phân tích</div>
+                            <div class="super-badge"><i class="fas fa-lightbulb"></i> Giải quyết Vấn đề</div>
+                            <div class="super-badge"><i class="fas fa-comments"></i> Kỹ năng Giao tiếp</div>
+                            <div class="super-badge"><i class="fas fa-hands-helping"></i> Làm việc Nhóm</div>
+                            <div class="super-badge"><i class="fas fa-hourglass-half"></i> Quản lý Thời gian</div>
                         </div>
                     </div>
                 </div>
@@ -220,9 +198,9 @@
         <div class="bg-cloud-blob bg-cloud-warm float-animation-2" style="top: -5%; right: -5%;"></div>
         <div class="bg-cloud-blob bg-cloud-warm float-animation-3" style="bottom: -5%; left: 10%; width: 350px; height: 350px;"></div>
         <!-- Side clouds -->
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 15%; animation-delay: -2s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 65%; animation-delay: -5s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 40%; animation-delay: -1s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-blue" style="top: 20%; animation-delay: -45s; animation-duration: 70s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 75%; animation-delay: -8s; animation-duration: 95s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-cyan" style="top: 10%; animation-delay: -21s; animation-duration: 80s;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title">Giải thưởng & <span>Thành tựu</span></h2>
             
@@ -235,7 +213,7 @@
                     <div class="timeline-content">
                         <div class="award-year">Năm 2026</div>
                         <h3 class="award-title">Quán quân (Giải Nhất) | Cuộc thi Xây dựng AI Chatbot</h3>
-                        <div class="award-organizer"><i class="fas fa-university"></i> Ban tổ chức: UFM kết hợp cùng SV5T - Roboscope</div>
+                        <div class="award-organizer"><i class="fas fa-university"></i> Ban tổ chức: Trường Đại học Tài chính - Marketing</div>
                         <p class="award-desc">Hệ thống Chatbot AI tích hợp hỗ trợ sinh viên tự động xét duyệt danh hiệu <strong>Sinh viên 5 tốt</strong> — giúp sinh viên tra cứu điều kiện, nộp hồ sơ và theo dõi tiến trình xét duyệt ngay trong giao diện chat thông minh, không cần qua nhiều khâu thủ công.</p>
                         <div class="award-action-row">
                             <button class="award-source-link award-video-btn" onclick="openChatbotVideoModal()">
@@ -265,9 +243,9 @@
         <div class="bg-cloud-blob bg-cloud-cyan float-animation-1" style="top: -5%; left: -5%;"></div>
         <div class="bg-cloud-blob float-animation-2" style="bottom: 10%; right: -5%;"></div>
         <!-- Side clouds -->
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 15%; animation-delay: -2s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 65%; animation-delay: -5s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 40%; animation-delay: -1s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 5%; animation-delay: -33s; animation-duration: 110s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-blue" style="top: 85%; animation-delay: -17s; animation-duration: 68s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-white" style="top: 45%; animation-delay: -50s; animation-duration: 88s;"></div>
         
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title">Kinh nghiệm <span>Làm việc</span></h2>
@@ -286,7 +264,7 @@
                             <ul style="list-style-type: none; padding-left: 0; margin: 0;">
                                 <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
                                     <i class="fas fa-check-circle" style="color: var(--color-highlight); margin-right: 10px; margin-top: 4px;"></i>
-                                    <span>Phân tích quy trình nghiệp vụ và yêu cầu của khách hàng để hỗ trợ triển khai giải pháp phần mềm quản lý nhân sự ezHR (các phân hệ chấm công, tính lương, tuyển dụng).</span>
+                                    <span>Nghiên cứu sâu về <strong>Domain HRM</strong> (Quản trị nguồn nhân lực), phân tích quy trình nghiệp vụ và yêu cầu của khách hàng để hỗ trợ triển khai giải pháp phần mềm ezHR (phân hệ chấm công, tính lương, tuyển dụng).</span>
                                 </li>
                                 <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
                                     <i class="fas fa-check-circle" style="color: var(--color-highlight); margin-right: 10px; margin-top: 4px;"></i>
@@ -309,10 +287,10 @@
         <!-- Ambient Cloud Glow -->
         <div class="bg-cloud-blob float-animation-2" style="bottom: -20%; right: -10%;"></div>
         <!-- Side clouds -->
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 20%; animation-delay: -3s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 65%; animation-delay: -6s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-white" style="top: 35%; animation-delay: 0s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-yellow" style="top: 75%; animation-delay: -4s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 15%; animation-delay: -4s; animation-duration: 77s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 50%; animation-delay: -40s; animation-duration: 92s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-blue" style="top: 5%; animation-delay: -15s; animation-duration: 65s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-yellow" style="top: 80%; animation-delay: -55s; animation-duration: 105s;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title">Dự án <span>Thực tế</span></h2>
             
@@ -326,10 +304,10 @@
                             Đây là đồ án cá nhân được thực hiện nhằm mô phỏng quy trình quản lý bán hàng trong doanh nghiệp. Xây dựng giải pháp quản lý bán hàng nội bộ, hỗ trợ nhân viên bán hàng nhập và quản lý đơn hàng khi khách đặt mua. Thực hiện khảo sát yêu cầu, phân tích nghiệp vụ, thiết kế quy trình, xây dựng cơ sở dữ liệu và phát triển website mẫu để kiểm chứng và minh họa giải pháp.
                         </p>
                         <div class="project-card-techs">
-                            <span class="tech-badge">UML Modeling</span>
-                            <span class="tech-badge">Database Design</span>
-                            <span class="tech-badge">SQL</span>
-                            <span class="tech-badge">Git & Code</span>
+                            <span class="tech-badge">Sơ đồ UML</span>
+                            <span class="tech-badge">Thiết kế CSDL</span>
+                            <span class="tech-badge">Truy vấn SQL</span>
+                            <span class="tech-badge">Lập trình cơ bản</span>
                         </div>
                         <div style="display: flex; gap: 1rem; width: 100%; margin-top: auto;">
                             <a href="javi-coffee-detail.html" class="btn btn-primary" style="flex: 1.2; justify-content: center; text-align: center;">
@@ -351,16 +329,15 @@
                             Nghiên cứu trải nghiệm người dùng nhằm tăng tỷ lệ chuyển đổi đơn hàng đặt vé xem phim. Thiết kế luồng đi người dùng (User Flow), vẽ sơ đồ khung dây (Wireframes) và dựng bản Mockup tương tác trên website trên máy tính.
                         </p>
                         <div class="project-card-techs">
-                            <span class="tech-badge">User Research</span>
-                            <span class="tech-badge">Wireframing</span>
-                            <span class="tech-badge">Figma Mockup</span>
-                            <span class="tech-badge">A/B Testing</span>
+                            <span class="tech-badge">Nghiên cứu Người dùng</span>
+                            <span class="tech-badge">Vẽ Wireframes</span>
+                            <span class="tech-badge">Mockup trên Figma</span>
                         </div>
                         <div style="display: flex; gap: 1rem; width: 100%; margin-top: auto;">
                             <a href="movie-booking-detail.html" class="btn btn-primary project-card-link" style="flex: 1.2; justify-content: center; text-align: center;">
                                 Xem chi tiết giao diện <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="https://www.figma.com/design/pUXmeJfq2M4oEic1vIGk2n/H%E1%BB%87-th%E1%BB%91ng-%C4%91%E1%BA%B7t-v%C3%A9---VIBE-TICKET?t=KK15btHZ1hcUjyRQ-1" target="_blank" class="btn btn-secondary" style="flex: 0.8; justify-content: center; text-align: center;">
+                            <a href="https://www.figma.com/proto/pUXmeJfq2M4oEic1vIGk2n/H%E1%BB%87-th%E1%BB%91ng-%C4%91%E1%BA%B7t-v%C3%A9---VIBE-TICKET?node-id=5-2010&t=Oqt2hQoXRaSe1XCk-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2010" target="_blank" class="btn btn-secondary" style="flex: 0.8; justify-content: center; text-align: center;">
                                 <i class="fab fa-figma"></i> Thiết kế Figma
                             </a>
                         </div>
@@ -375,9 +352,9 @@
         <!-- Ambient Cloud Glow -->
         <div class="bg-cloud-blob float-animation-3" style="top: 10%; left: 25%;"></div>
         <!-- Side clouds -->
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-cyan" style="top: 25%; animation-delay: -2s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-yellow" style="top: 70%; animation-delay: -5s;"></div>
-        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-yellow" style="top: 45%; animation-delay: -1s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-blue" style="top: 35%; animation-delay: -29s; animation-duration: 82s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-L css-cloud-white" style="top: 85%; animation-delay: -11s; animation-duration: 60s;"></div>
+        <div class="css-cloud css-cloud-side css-cloud-side-R css-cloud-cyan" style="top: 20%; animation-delay: -48s; animation-duration: 98s;"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h2 class="section-title">Kết nối với <span>Tôi</span></h2>
             
@@ -405,15 +382,6 @@
                         </div>
                         <div class="contact-icon-arrow"><i class="fas fa-arrow-right"></i></div>
                     </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/tohuwne" target="_blank" class="contact-method-item">
-                        <div class="contact-method-left">
-                            <span class="contact-lbl">Mạng xã hội</span>
-                            <span class="contact-val">github.com/tohuwne</span>
-                        </div>
-                        <div class="contact-icon-arrow"><i class="fas fa-arrow-right"></i></div>
-                    </a>
                 </div>
             </div>
         </div>
@@ -425,7 +393,7 @@
             <div class="footer-logo">
                 <span class="logo-glow">Nguyễn Minh Thư</span>
             </div>
-            <p class="footer-copy">&copy; 2026 Nguyễn Minh Thư. Thiết kế chuyên nghiệp cho hồ sơ năng lực Business Analyst.</p>
+            <p class="footer-copy">&copy; 2026 Nguyễn Minh Thư.</p>
         </div>
     </footer>
 

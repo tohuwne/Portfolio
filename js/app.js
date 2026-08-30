@@ -69,6 +69,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 3.5 Scroll Spy cho Navigation Links
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    if (sections.length > 0 && navItems.length > 0) {
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= (sectionTop - 250)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        // Cập nhật trạng thái ngay khi bấm
+        navItems.forEach(a => {
+            a.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    }
+
     // 4. File Explorer UI logic (Detailed pages)
     const treeItems = document.querySelectorAll('.tree-item');
     const fileContents = document.querySelectorAll('.file-content');
@@ -422,6 +453,30 @@ document.addEventListener('DOMContentLoaded', () => {
         
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeLightbox();
+        });
+    }
+
+    // 6. Skills Tabs Logic
+    const skillTabs = document.querySelectorAll('.skill-tab');
+    const skillPanes = document.querySelectorAll('.skill-pane');
+
+    if (skillTabs.length > 0) {
+        skillTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active classes
+                skillTabs.forEach(t => t.classList.remove('active'));
+                skillPanes.forEach(p => p.classList.remove('active'));
+
+                // Add active to clicked tab
+                tab.classList.add('active');
+
+                // Add active to corresponding pane
+                const targetId = tab.getAttribute('data-target');
+                const targetPane = document.getElementById(`pane-${targetId}`);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
         });
     }
 });

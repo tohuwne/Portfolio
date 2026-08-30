@@ -40,24 +40,11 @@
                 </div>
                 
                 <ul class="explorer-tree">
-                    <!-- Category 1: User Research -->
-                    <li class="tree-category">
-                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Nghiên cứu & Phân tích</span>
-                        <ul class="tree-items">
-                            <li class="tree-item active" data-file="persona">
-                                <i class="far fa-file-image"></i> User Persona
-                            </li>
-                            <li class="tree-item" data-file="empathy">
-                                <i class="far fa-file-image"></i> Empathy Map
-                            </li>
-                        </ul>
-                    </li>
-
                     <!-- Category 2: User Flows -->
                     <li class="tree-category">
                         <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Luồng người dùng</span>
                         <ul class="tree-items">
-                            <li class="tree-item" data-file="userflow-dang-ky-dang-nhap">
+                            <li class="tree-item active" data-file="userflow-dang-ky-dang-nhap">
                                 <i class="far fa-file-image"></i> Đăng ký / Đăng nhập
                             </li>
                             <li class="tree-item" data-file="userflow-tim-kiem-loc-su-kien">
@@ -146,63 +133,19 @@
                         </ul>
                     </li>
 
-                    <!-- Category 5: Style Guide -->
-                    <li class="tree-category">
-                        <span class="tree-category-name"><i class="fas fa-chevron-down"></i> 📂 Hướng dẫn phong cách</span>
-                        <ul class="tree-items">
-                            <li class="tree-item" data-file="styleguide">
-                                <i class="far fa-file-image"></i> Style Guide
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
 
             <!-- Content Area: Diagram Viewer -->
             <div class="explorer-viewer">
                 <div class="explorer-viewer-path">
-                    <i class="fas fa-hdd"></i> Gốc / Đặt vé Phim / <span id="current-path-text">Nghiên cứu & Phân tích / User Persona</span>
+                    <i class="fas fa-hdd"></i> Gốc / Đặt vé Phim / <span id="current-path-text">Luồng người dùng / Đăng ký / Đăng nhập</span>
                 </div>
 
                 <div class="explorer-canvas">
                     <div class="explorer-canvas-inner">
-                    <!-- === USER RESEARCH === -->
-                    <!-- File Content 1: User Persona -->
-                    <div class="file-content active" id="file-persona">
-                        <div class="diagram-viewer-container">
-                            <img src="images/movie-persona.png" alt="User Persona" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
-                            <div class="placeholder-fallback-wrapper">
-                                <div class="placeholder-box" style="min-height: 400px;">
-                                    <i class="far fa-image placeholder-icon"></i>
-                                    <h4>Khung chứa ảnh User Persona</h4>
-                                    <p>Bạn chỉ cần lưu ảnh User Persona của bạn vào thư mục dự án với đường dẫn: <code>images/movie-persona.png</code> để hiển thị ở đây.</p>
-                                    <div class="info-tag-box" style="margin-top: 1.5rem; text-align: left; background-color: rgba(20, 184, 166, 0.05); padding: 1rem; border-left: 3px solid var(--color-brand-light); border-radius: 4px; font-size: 0.85rem;">
-                                        <strong>💡 Mô tả tóm tắt:</strong> Persona đại diện là Minh (22 tuổi, sinh viên) - Người dùng nhạy cảm về giá, thường đặt vé sát giờ chiếu và có thói quen thanh toán nhanh qua ví điện tử.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- File Content 2: Empathy Map -->
-                    <div class="file-content" id="file-empathy">
-                        <div class="diagram-viewer-container">
-                            <img src="images/movie-empathy.png" alt="Empathy Map" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
-                            <div class="placeholder-fallback-wrapper">
-                                <div class="placeholder-box" style="min-height: 400px;">
-                                    <i class="far fa-image placeholder-icon"></i>
-                                    <h4>Khung chứa ảnh Empathy Map (Bản đồ thấu cảm)</h4>
-                                    <p>Bạn chỉ cần lưu ảnh Empathy Map vào thư mục dự án với đường dẫn: <code>images/movie-empathy.png</code> để hiển thị ở đây.</p>
-                                    <div class="info-tag-box" style="margin-top: 1.5rem; text-align: left; background-color: rgba(20, 184, 166, 0.05); padding: 1rem; border-left: 3px solid var(--color-brand-light); border-radius: 4px; font-size: 0.85rem;">
-                                        <strong>💡 Mô tả tóm tắt:</strong> Bản đồ thấu cảm thể hiện Suy nghĩ & Cảm nhận, Lời nói & Hành động, Nghe thấy, Nhìn thấy của khách hàng khi đối mặt với trải nghiệm đặt vé phức tạp hiện tại.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- === USER FLOW DIAGRAMS === -->
-                    <div class="file-content" id="file-userflow-dang-ky-dang-nhap">
+                    <div class="file-content active" id="file-userflow-dang-ky-dang-nhap">
                         <div class="diagram-viewer-container">
                             <img src="images/vibeticket/userflow/userflow-dang-ky-dang-nhap.jpg" alt="Userflow Đăng ký / Đăng nhập" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
                             <div class="placeholder-fallback-wrapper">
@@ -517,19 +460,6 @@
                         </div>
                     </div>
 
-                    <!-- === STYLE GUIDE === -->
-                    <div class="file-content" id="file-styleguide">
-                        <div class="diagram-viewer-container">
-                            <img src="images/vibeticket/styleguide/styleguide.jpg" alt="Style Guide" class="diagram-img" style="display: none; max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); margin: 0 auto;" onload="checkDiagramImage(this)" onerror="checkDiagramImage(this)">
-                            <div class="placeholder-fallback-wrapper">
-                                <div class="placeholder-box" style="min-height: 400px;">
-                                    <i class="far fa-image placeholder-icon"></i>
-                                    <h4>Style Guide (Hướng dẫn phong cách)</h4>
-                                    <p>Đường dẫn tệp: <code>images/vibeticket/styleguide/styleguide.jpg</code></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div> <!-- End of explorer-canvas-inner -->
             </div> <!-- End of explorer-canvas -->
             </div> <!-- End of explorer-viewer -->
